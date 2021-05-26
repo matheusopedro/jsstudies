@@ -1,0 +1,17 @@
+{
+  "name": "jsstudies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "promise_chaining.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-pchn": "nodemon ./promise_chaining.js",
+    "dev-reduce": "nodemon ./reduce.js"
+  },
+  "author": "Matheus Pedro",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "nodemon": "^2.0.7"
+  }
+}
