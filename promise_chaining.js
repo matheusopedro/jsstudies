@@ -1,28 +1,13 @@
 // promise chaining test
 'use strict'
-
 const { default: axios } = require("axios");
 
-var p = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve(10);
-  }, 3 * 100);
-});
-
-// then always return new promise
-// p.then((result) => {
-//   console.log(result);
-//   return result * 2;
-// }).then((result) => {
-//   console.log(result);
-//   return result * 3;
-// })
-
 // Chain promises with requests
-var baseUrl = 'https://api.nytimes.com/svc/movies/v2'
+var baseUrl = process.env.NYT_API_BASE_URL;
+const apiKey = process.env.NYT_API_KEY;
+console.log(`${baseUrl}, ${apiKey}`);
 var movie = 'lord of the rings'
 // var movie = 'lebowski'
-const apiKey = 'cAiCltXhb4k1meZCUGDGwXfGYLX9FQxN';
 
 function getMovieReview(movieName) {
   return new Promise((resolve, reject) => {
