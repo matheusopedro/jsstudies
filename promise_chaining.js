@@ -5,7 +5,6 @@ const { default: axios } = require("axios");
 // Chain promises with requests
 var baseUrl = process.env.NYT_API_BASE_URL;
 const apiKey = process.env.NYT_API_KEY;
-console.log(`${baseUrl}, ${apiKey}`);
 var movie = 'lord of the rings'
 // var movie = 'lebowski'
 
